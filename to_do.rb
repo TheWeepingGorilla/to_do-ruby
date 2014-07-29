@@ -19,6 +19,20 @@ def list_lists
   puts "\n"
 end
 
+def remove_list
+  puts ("Please enter name of list to remove:")
+  list_to_remove = gets.chomp
+  @list_of_lists.each do |each_list|
+    if each_list.name == list_to_remove
+      @list_of_lists.delete(each_list)
+    end
+  end
+end
+
+add_list
+add_list
+remove_list
+list_lists
 
 
 
