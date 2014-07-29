@@ -2,6 +2,7 @@ require './lib/task'
 require './lib/list'
 
 @list_of_lists = []
+@list_selected
 
 def add_list
   puts ("Please name your list:")
@@ -29,10 +30,23 @@ def remove_list
   end
 end
 
-add_list
-add_list
-remove_list
-list_lists
+def select_list
+  puts ("Please enter name of list to select:")
+  list_to_select = gets.chomp
+  @list_of_lists.each do |each_list|
+    if each_list.name == list_to_select
+    @list_selected = each_list
+    puts "Your currently selected list is #{@list_selected.name}"
+    end
+  end
+end
+
+
+
+
+
+
+
 
 
 
