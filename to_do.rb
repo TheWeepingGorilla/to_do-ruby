@@ -11,4 +11,15 @@ def add_list
   puts "\n"
 end
 
-add_list
+def list_lists
+  puts "Here are your Lists:"
+  @list_of_lists.each do |list|
+    puts "#{list.name}"
+  end
+  puts "\n"
+end
+
+
+
+
+
